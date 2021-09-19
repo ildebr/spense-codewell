@@ -121,6 +121,11 @@ div.container main .associated-socials {
 div.container main .associated-socials img {
   width: 30%;
 }
+
+div.container main section, div.container main section .photo-sec{
+  overflow: hidden;
+}
+
 div.container main section.principal {
   background-color: #f0eeeb;
   padding-bottom: 0;
