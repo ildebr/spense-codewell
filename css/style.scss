@@ -1,0 +1,327 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+p, li, a{
+	font-size: 1.1rem;
+}
+
+*{
+	color: #464646;
+}
+
+html{
+	font-family: sans-serif;
+}
+
+$color-principal: #f0eeeb;
+
+div.container{
+
+	min-width: 300px;
+	&>*{
+		padding: 1rem;
+	}
+
+	.sec-name{
+		font-size: 2.3rem;
+		margin-bottom: .75rem;
+		color: black;
+	}
+
+	.image-fit{
+		width: 100%;
+		height: auto;
+	}
+
+	
+
+	section.notice{
+		background-color: black;
+		color: white;
+
+		p{
+			color: white;
+		}
+
+		a{
+			color: white;
+		}
+	}
+
+	header.landing-view{
+		padding-top: 0;
+		background-color: $color-principal;
+
+
+		nav{
+			padding: 2.5rem 0;
+
+			.nav-container{
+				display: flex;
+		    	justify-content: space-between;
+		    	h3{
+		    		font-size: 1.6rem;
+		    	}
+			}
+		}
+
+		picture > img{
+			width: 100%;
+		}
+
+		section{
+			margin-top: 2rem;
+
+			& > p, ul{
+				margin-bottom: 0.75rem;
+			}
+		}
+
+		.bullet-points{
+			li{
+				background: url('../Assets/Checkmark.svg') no-repeat left center;
+				background-size: 25px;
+				list-style: none;
+				margin: 0;
+				vertical-align: middle;
+				padding: 6px 0 6px 35px;
+			}
+		}
+
+		form{
+			border: none;
+			fieldset{
+				border: none;
+				display: flex;
+				justify-content: space-around;
+
+				.form-group, button{
+					display: inline-block;
+					padding-right: 1rem;
+
+				}
+
+				.form-group{
+					width: 65%;
+				}
+
+				input, button{
+					padding: 1rem;
+					font-size: 1rem;
+					text-align: center;
+				}
+
+				input{
+					width: 100%;
+				}
+
+				button{
+					background-color: black;
+					color: white;
+					border-radius: 5px;
+					border: none;
+					width: 35%;
+				}
+
+			}
+
+
+
+		}
+
+	}
+
+	main{
+		padding-top: 0;
+		.associated-socials{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			padding: 2.5rem 0;
+
+			img{
+				width: 30%;
+			}
+		}
+
+		section{
+			
+
+			&.principal{
+				background-color: $color-principal;
+				padding-bottom: 0;
+				margin-bottom: 2.5rem;
+
+				.text-sec{
+					padding: 2rem;
+					padding-bottom: 0;
+					overflow: hidden;
+				}
+			}
+
+
+		}
+
+		p{
+			margin-bottom: 0.75rem;
+		}
+	}
+
+	footer{
+		background-color: black;
+
+		.inside-footer{
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		li,p{
+			color: #9e9e9e;
+			font-size: 1rem;
+		}
+		h4{
+			color: white;
+			margin-bottom: 0.5rem;
+		}
+
+		.footer-sec{
+			margin-bottom: 1rem;
+			width: 50%;
+
+			&.principal{
+				width: 100%;
+			}
+		}
+	}
+
+	
+}
+
+
+@media only screen and (min-width: 550px){
+	div.container{
+
+		& > *{
+			padding: 2rem;
+		}
+
+		.sec-name{
+			font-size: 2.8rem;
+		}
+
+		header.landing-view{
+
+			
+
+			
+		}
+
+		main{
+
+			section.principal{
+				.text-sec{
+					padding: 4rem 7rem 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		footer{
+			padding-top: 3rem;
+			.footer-sec{
+				width: 25%;
+				margin-bottom: 2rem;
+
+
+				&.principal{
+					width: 50%;
+					padding-right: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 900px){
+	div.container{
+		header.landing-view{
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 3rem;
+
+			nav{
+				width: 100%;
+			}
+			picture{
+				width: 35%;
+				order: 2;
+			}
+
+			section{
+				width: 65%;
+				margin-top: 0;
+				order: 1;
+				padding-right: 2rem;
+
+			}
+		}
+
+		main{
+			section.principal, section{
+				display: flex;
+
+				.text-sec{
+					padding: 2rem;
+					padding-bottom: 0;
+					padding-top: 0;
+					width: 60%;
+
+					header{
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+					}
+				}
+				.photo-sec{
+					width: 40%;
+				}
+			}
+
+		}
+
+		section.segundo{
+			.text-sec{
+				width: 45%;
+				order: 2;
+			}
+
+			.photo-sec{
+				width: 55%;
+				order: 1;
+			}
+		}
+
+		footer{
+			.footer-sec{
+				width: 15%;
+
+
+				&.principal{
+					width: 40%;
+					padding-right: 2rem;
+				}
+			}
+		}
+	}
+}
